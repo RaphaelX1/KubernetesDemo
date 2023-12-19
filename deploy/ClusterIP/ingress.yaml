@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kubernetes-demo
+  namespace: kubernetes-demo-cluster-ip
+  labels:
+    name: kubernetes-demo
+spec:
+  rules:
+  - host: kubernetes-demo.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: kubernetes-demo
+            port: 
+              number: 8080

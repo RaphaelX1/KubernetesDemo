@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kubernetes-demo
+  namespace: kubernetes-demo-cluster-ip
+data:
+  VAR_TEST: "ConfigMap Injected Value"
